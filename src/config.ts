@@ -1,0 +1,9 @@
+// Central place for entity IDs and display settings. Add new entities here as you add integrations.
+export const config = {
+  locale: 'nb-NO',
+  weatherEntity: 'weather.hjem',
+  forecastDays: 5,
+  sunriseEntity: 'sensor.sun_next_rising',
+  sunsetEntity: 'sensor.sun_next_setting',
+  shoppingListEntity: 'todo.shopping_list',
+} as const
