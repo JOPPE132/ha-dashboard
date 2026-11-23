@@ -6,4 +6,9 @@ export const config = {
   sunriseEntity: 'sensor.sun_next_rising',
   sunsetEntity: 'sensor.sun_next_setting',
   shoppingListEntity: 'todo.shopping_list',
+  calendarDays: 7,
+  power: {
+    vat: 0.25,
+    markupOre: 0,
+  },
 } as const

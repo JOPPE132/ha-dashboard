@@ -9,6 +9,10 @@ import { PresenceCard } from './components/PresenceCard'
 import { ShoppingListCard } from './components/ShoppingListCard'
 import { TokenSetup } from './components/TokenSetup'
 import { LightsCard } from './components/LightsCard'
+import { TemperatureCard } from './components/TemperatureCard'
+import { CalendarCard } from './components/CalendarCard'
+import { EmailCard } from './components/EmailCard'
+import { PowerPriceCard } from './components/PowerPriceCard'
 
 export default function App() {
   const [token, setToken] = useState<string | null>(getToken)
@@ -43,12 +47,16 @@ export default function App() {
         <div className="col col-main">
           <WeatherCard />
           <SunCard />
+          <PowerPriceCard />
+          <TemperatureCard />
+          <EmailCard />
         </div>
         <div className="col col-lights">
           <LightsCard />
         </div>
         <div className="col col-side">
           <PresenceCard />
+          <CalendarCard />
           <ShoppingListCard />
         </div>
       </main>

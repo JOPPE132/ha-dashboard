@@ -17,9 +17,9 @@ export function useEntitiesByDomain(domain: string): HassEntity[] {
 export function useCallService() {
   const { connection } = useHass()
   return useCallback(
-    (domain: string, service: string, data?: object, target?: HassServiceTarget) => {
+    (domain: string, service: string, data?: object, target?: HassServiceTarget, returnResponse?: boolean) => {
       if (!connection) return Promise.reject(new Error('Not connected'))
-      return callService(connection, domain, service, data, target)
+      return callService(connection, domain, service, data, target, returnResponse)
     },
     [connection],
   )

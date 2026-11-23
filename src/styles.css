@@ -506,6 +506,133 @@ textarea {
   color: var(--ok);
 }
 
+/* ---------- temperature ---------- */
+.temp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  gap: 0.75rem 1.25rem;
+}
+
+.temp-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.temp-tile .unit {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-left: 0.15rem;
+}
+
+/* ---------- power price ---------- */
+.power-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.power-now.cheap .big {
+  color: var(--ok);
+}
+
+.power-now.expensive .big {
+  color: var(--bad);
+}
+
+.power-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- email ---------- */
+.email-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.email-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.email-count {
+  min-width: 2.2rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--card-border);
+  text-align: center;
+  font-weight: 600;
+}
+
+.email-count.has-unread {
+  background: var(--accent);
+  color: #1a1a1a;
+}
+
+/* ---------- calendar ---------- */
+.calendar {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.agenda {
+  overflow-y: auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.agenda-day h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.agenda-day ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.agenda-item {
+  display: flex;
+  gap: 0.9rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.agenda-time {
+  flex-shrink: 0;
+  width: 3.6rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.agenda-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.agenda-sub {
+  font-size: 0.85rem;
+}
+
 /* ---------- token setup ---------- */
 .setup {
   height: 100%;
